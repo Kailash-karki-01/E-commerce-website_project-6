@@ -1,0 +1,13 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+:root{
+    --prime-heading:46px;
+    --prime-heading:36.8px;
+    --prime-heading:39.44px;
+
+    --prime-font-body: 16px;
+    --sec-font-body: 14px;
+}
