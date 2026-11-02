@@ -88,4 +88,15 @@ nav ul li a{
     box-shadow: inset 2px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-
+.ham-menu{
+    height: 100vh;
+    width: 170px;
+    background-color: var(--nav-color);
+    border-radius: 0px 10px 10px 0px;
+}
+.ham-menu .menu{
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    background-color: var(--prime-color);
+}
