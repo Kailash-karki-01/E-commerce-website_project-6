@@ -4,10 +4,88 @@
     box-sizing: border-box;
 }
 :root{
-    --prime-heading:46px;
-    --prime-heading:36.8px;
-    --prime-heading:39.44px;
+    --prime-heading1:36px;
+    --prime-heading2:32px;
+    --prime-heading3:24px;
 
     --prime-font-body: 16px;
     --sec-font-body: 14px;
+    --prime-font-color: black;
+    --font-color: #496B30;
+
+    --prime-color : #A0C982;
+    --nav-color : #F1F7ED;
 }
+
+header nav{
+    height: 106px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 50px;
+    background-color: var(--prime-color);
+    color: var(--prime-font-color);
+}
+
+nav .logo{
+    height:72px;
+    width: 72px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+}
+nav .logo img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+nav .searchbar{
+    height: 41px;
+    width: 479px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 10px;
+}
+
+.searchbar input{
+    height: 70%;
+    width: 92%;
+    border: none;
+    outline: none;
+}
+.searchbar i{
+    height: 70%;
+}
+
+nav ul{
+    height: 37px;
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+nav ul li a{
+    height: 36px;
+    width: 130px;
+    color: var(--prime-font-color);
+    text-decoration: none;
+    font-size: var(--prime-heading2);
+}
+#home{
+    font-size: var(--prime-heading3);
+    padding: 4px 10px;
+    position:relative;
+    background-color: #A2BF8D;
+    border-radius: 10px;
+    color: #496B30;
+    box-shadow: inset 2px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
