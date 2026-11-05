@@ -105,20 +105,24 @@ nav ul li a:hover::before{
    
 }
 main{
-    height: 100vh;
+   min-height: 100%;
     width: 100%;
     display: grid;
     grid-template-columns:170px 1fr;
-    grid-template-rows: 0;
+    grid-template-rows: 1fr;
+    position: relative;
 }
 .ham-menu{
-    height: 100%;
+    height: 100vh;
     width: 170px;
     background-color: var(--nav-color);
     border-radius: 0px 10px 10px 0px;
     transform: translateX(0px);
     transition: transform 0.1s ease;
     grid-column: 1 / 2;
+    grid-row: 1;
+    position: sticky;
+    top: 0px;
 }
 
 .ham-menu .menu{
@@ -170,15 +174,21 @@ main{
 .item:hover{
     background-color: rgb(181, 181, 181);
 }
-.product-store{
+.allProducts{
     grid-column: 2 / 3 ;
+    scroll-behavior: smooth;
+    scroll-margin-top: 200px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(auto-fit,minmax(fit-content,1fr));
+}
+.product-store{
     display: grid;
    min-width: fit-content;
     grid-template-columns: repeat(auto-fit,minmax(275px,1fr));
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: repeat(auto-fit,minmax(341px,1fr));
     gap :50px;
     margin-left: 50px;
-    transition: width 0.1s ease-in;
 }
 .card-container{
     height : 341px;
@@ -226,4 +236,5 @@ main{
 .price-list #p1{
     font-weight: 900;
     text-shadow: 0px -1px 4px  #beee9c;
+    text-decoration: underline;
 }

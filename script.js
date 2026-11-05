@@ -21,37 +21,37 @@ let items = [
     {
         imageUrl: "current.png",
         productName: "Current-Kurkure",
-        price: `RS ${50}`
+        price: `RS ${50}/-`
     },
     {
         imageUrl: "noodles.jfif",
         productName: "Current-Noodles",
-        price: `RS ${50}`
+        price: `RS ${50}/-`
     },
     {
         imageUrl: "wai-wai.png",
         productName: "Wai-Wai-noodles",
-        price: `RS ${20}`
+        price: `RS ${20}/-`
     },
     {
         imageUrl: "oreo.jfif",
         productName: "Oreo Biscuit",
-        price: `RS ${20}`
+        price: `RS ${20}/-`
     },
     {
         imageUrl: "dalmod.jpg",
         productName: "Dalmod Mixture",
-        price: `RS ${50}`
+        price: `RS ${50}/-`
     },
     {
         imageUrl: "biscuit.jfif",
         productName: "50-50 Biscuit",
-        price: `RS ${10}`
+        price: `RS ${10}/-`
     }
 ];
 
 function productCard(itemName, itemPrice, imgurl) {
-
+    
     const card = document.createElement("div");
     const showProduct = document.createElement("img");
     const price = document.createElement("div");
@@ -62,7 +62,6 @@ function productCard(itemName, itemPrice, imgurl) {
 
     p1.innerText = itemName;
     p2.innerText = itemPrice;
-
     card.classList.add("card-container");
     showProduct.classList.add("img-container");
     price.classList.add("price-list");
