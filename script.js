@@ -15,43 +15,41 @@ menu.addEventListener("click", () => {
 
 //code for showing the different products directly from js
 
-const store = document.querySelector(".product-store");
+const fastFoodStore = document.querySelector("#fast-food");
+const vegeStore = document.querySelector("#vegetables");
+const drinkStore = document.querySelector("#drinks");
+const dailyStore = document.querySelector("#daily-items");
 
-let items = [
-    {
-        imageUrl: "current.png",
-        productName: "Current-Kurkure",
-        price: `RS ${50}/-`
-    },
-    {
-        imageUrl: "noodles.jfif",
-        productName: "Current-Noodles",
-        price: `RS ${50}/-`
-    },
-    {
-        imageUrl: "wai-wai.png",
-        productName: "Wai-Wai-noodles",
-        price: `RS ${20}/-`
-    },
-    {
-        imageUrl: "oreo.jfif",
-        productName: "Oreo Biscuit",
-        price: `RS ${20}/-`
-    },
-    {
-        imageUrl: "dalmod.jpg",
-        productName: "Dalmod Mixture",
-        price: `RS ${50}/-`
-    },
-    {
-        imageUrl: "biscuit.jfif",
-        productName: "50-50 Biscuit",
-        price: `RS ${10}/-`
+class foodItems {
+    constructor(imageUrl, productName, price) {
+        this.imageUrl = imageUrl,
+            this.productName = productName,
+            this.price = price
     }
+};
+
+const fastItems = [new foodItems("current.png", "Current-Kurkure", "RS 50"), new foodItems("noodles.jfif", "Current-noodles", "RS 50"),
+new foodItems("wai-wai.png", "Wai Wai noodles", "RS 20"), new foodItems("oreo.jfif", "Oreo Biscuit", "RS 20"), new foodItems("dalmod.jpg", "Dalmod Mixture", "RS 50"),
+new foodItems("biscuit.jfif", "50-50 Biscuit", "RS 10")
 ];
 
-function productCard(itemName, itemPrice, imgurl) {
-    
+const vegeItems = [new foodItems("cabbage.jfif", "Cabbage", "RS 50/kg"), new foodItems("cauliflower.jfif", "Cauliflower", "RS 65/kg"),
+new foodItems("karelo.jfif", "Bitter Groud", "RS 75/kg"), new foodItems("Lauka.jfif", "Lauka", "RS 35/kg"), new foodItems("potato.jfif", "Potato", "RS 50/kg"),
+new foodItems("tomato.jfif", "Tomato", "RS 60/kg")
+];
+
+const drinkItems = [new foodItems("water.jfif", "Water bottle", "RS 20/pcs"), new foodItems("coke.jfif", "Coca Cola", "RS 80/pcs"),
+new foodItems("sprite.jfif", "Sprite", "RS 90/pcs"), new foodItems("mountaindeu.jfif", "Mountain Deu", "RS 80/pcs"), new foodItems("milk.jfif", "Milk", "RS 50/li"),
+new foodItems("juice.jfif", "Mix Juice", "RS 100/pcs")
+];
+
+const dailyItems = [new foodItems("salt.jfif", "Salt", "RS 25/pcs"), new foodItems("sugar.jfif", "Sugar", "RS 110/kg"),
+new foodItems("coffee.jfif", "Coffee", "RS 200/btl"), new foodItems("tea.jfif", "Tea", "RS 80/pck"), new foodItems("pen.jfif", "Pen (paras)", "RS 40/pck"),
+new foodItems("oats.jfif", "Oats", "150/pck")
+];
+
+function productCard(store,itemName, itemPrice, imgurl) {
+
     const card = document.createElement("div");
     const showProduct = document.createElement("img");
     const price = document.createElement("div");
@@ -78,8 +76,17 @@ function productCard(itemName, itemPrice, imgurl) {
 
 
 
-items.forEach((item) => {
-    productCard(item.productName, item.price, item.imageUrl)
+fastItems.forEach((item) => {
+    productCard(fastFoodStore,item.productName, item.price, item.imageUrl);
+});
+vegeItems.forEach((item) => {
+    productCard(vegeStore,item.productName, item.price, item.imageUrl);
+});
+drinkItems.forEach((item) => {
+    productCard(drinkStore,item.productName, item.price, item.imageUrl);
+});
+dailyItems.forEach((item) => {
+    productCard(dailyStore,item.productName, item.price, item.imageUrl);
 });
 
 
