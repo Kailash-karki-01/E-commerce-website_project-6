@@ -63,7 +63,7 @@ function productCard(store,itemName, itemPrice, imgurl) {
     card.classList.add("card-container");
     showProduct.classList.add("img-container");
     price.classList.add("price-list");
-    showProduct.src = `/images/${imgurl}`;
+    showProduct.src = `/E-commerce-website_project-6/images/${imgurl}`;
     price.appendChild(p1);
     price.appendChild(p2);
     showProduct.alt = "error";
