@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 :root{
+    scroll-behavior: smooth;
     --prime-heading1:36px;
     --prime-heading2:32px;
     --prime-heading3:24px;
@@ -111,6 +112,8 @@ main{
     grid-template-columns:170px 1fr;
     grid-template-rows: 1fr;
     position: relative;
+    scroll-behavior: smooth;
+   
 }
 .ham-menu{
     height: 100vh;
@@ -176,10 +179,11 @@ main{
 }
 .allProducts{
     grid-column: 2 / 3 ;
-    scroll-behavior: smooth;
-    scroll-margin-top: 200px;
+    
+    scroll-margin-top: 210px;
     display: grid;
     grid-template-columns: 1fr;
+    gap:1.5rem;
     grid-template-rows: repeat(auto-fit,minmax(fit-content,1fr));
 }
 .product-store{
@@ -187,24 +191,25 @@ main{
    min-width: fit-content;
     grid-template-columns: repeat(auto-fit,minmax(275px,1fr));
     grid-template-rows: repeat(auto-fit,minmax(341px,1fr));
-    gap :50px;
+    gap :20px;
     margin-left: 50px;
+    
 }
 .card-container{
-    height : 341px;
+    height : 280px;
     width: 271px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap :20px;
+    gap :15px;
     align-items: center;
     margin-top : 10px;
 }
 
 
 .img-container{
-    height: 219px;
-    width: 270px;
+    height: 180px;
+    width: 230px;
     border-radius: 10px;
     box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25), 0px 0px 10px rgb(182, 255, 182); 
     transition: transform 0.1s ease; 
@@ -232,6 +237,7 @@ main{
     gap: 10px;
     color: var(--font-color);
     font-size: var(--prime-heading3);
+    cursor: default;
 }
 .price-list #p1{
     font-weight: 900;
